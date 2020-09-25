@@ -17,7 +17,7 @@
 2. add userparameters for all monitored hosts (http or https)&#13;
 &#13;
 &#13;
-UserParameter=gitlab.json[*], curl -s https://localhost/-/liveness?token=$1</description>
+UserParameter=gitlab.json[*], curl -s https://localhost/-/liveness?token=$1\&\&all=1</description>
             <groups>
                 <group>
                     <name>Templates</name>
@@ -113,7 +113,7 @@ UserParameter=gitlab.json[*], curl -s https://localhost/-/liveness?token=$1</des
                     <preprocessing>
                         <step>
                             <type>12</type>
-                            <params>$.cache_check.status</params>
+                            <params>$.cache_check[0].status</params>
                         </step>
                     </preprocessing>
                     <jmx_endpoint/>
@@ -161,7 +161,7 @@ UserParameter=gitlab.json[*], curl -s https://localhost/-/liveness?token=$1</des
                     <preprocessing>
                         <step>
                             <type>12</type>
-                            <params>$.db_check.status</params>
+                            <params>$.db_check[0].status</params>
                         </step>
                     </preprocessing>
                     <jmx_endpoint/>
@@ -209,7 +209,7 @@ UserParameter=gitlab.json[*], curl -s https://localhost/-/liveness?token=$1</des
                     <preprocessing>
                         <step>
                             <type>12</type>
-                            <params>$.gitaly_check.status</params>
+                            <params>$.gitaly_check[0].status</params>
                         </step>
                     </preprocessing>
                     <jmx_endpoint/>
@@ -257,7 +257,7 @@ UserParameter=gitlab.json[*], curl -s https://localhost/-/liveness?token=$1</des
                     <preprocessing>
                         <step>
                             <type>12</type>
-                            <params>$.queues_check.status</params>
+                            <params>$.queues_check[0].status</params>
                         </step>
                     </preprocessing>
                     <jmx_endpoint/>
@@ -305,7 +305,7 @@ UserParameter=gitlab.json[*], curl -s https://localhost/-/liveness?token=$1</des
                     <preprocessing>
                         <step>
                             <type>12</type>
-                            <params>$.redis_check.status</params>
+                            <params>$.redis_check[0].status</params>
                         </step>
                     </preprocessing>
                     <jmx_endpoint/>
@@ -353,7 +353,7 @@ UserParameter=gitlab.json[*], curl -s https://localhost/-/liveness?token=$1</des
                     <preprocessing>
                         <step>
                             <type>12</type>
-                            <params>$.shared_state_check.status</params>
+                            <params>$.shared_state_check[0].status</params>
                         </step>
                     </preprocessing>
                     <jmx_endpoint/>
