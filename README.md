@@ -1,8 +1,8 @@
-> Version 1.0 - (20190117)
+> Version 1.1 - (2020.9.25)
 
 ### Zabbix Template for GitLab health check
 
-for Zabbix 3.x (Zabbix 2.x was not tested)
+for Zabbix 3.x+ (test in 4.4)
 
 zabbix-agent must be installed on the monitored node
 
@@ -24,6 +24,7 @@ zabbix-agent must be installed on the monitored node
 ### Version
 
 * 1.0 - initial
+* 1.1(remix) -for Gitlab 12.4+
 
 
 
